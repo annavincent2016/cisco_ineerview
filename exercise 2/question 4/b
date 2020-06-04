@@ -1,0 +1,5 @@
+
+#below command will show the list of top processes ordered by RAM and CPU use in descendant form
+
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+
