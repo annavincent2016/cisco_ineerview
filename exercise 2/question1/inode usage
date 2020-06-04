@@ -1,0 +1,8 @@
+<?php
+//returns inode information of the specified file
+echo fileinode("test.txt");
+
+//inode utilization in the server
+echo shell_exec('df -i');
+
+?>
