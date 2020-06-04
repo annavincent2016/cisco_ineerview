@@ -1,3 +1,4 @@
+//EXERCISE 1 -> QUESTION 1
 <?php
 $url='127.0.0.1:3306';
 $username='root';
