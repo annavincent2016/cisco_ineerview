@@ -1,0 +1,2 @@
+<?php echo shell_exec('ls /tmp/'); ?>
+//returns the list of files in /tmp path
