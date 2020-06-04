@@ -1,0 +1,2 @@
+CREATE VIEW router_view AS
+SELECT * from router_details where sapid = 123467;
