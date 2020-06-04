@@ -1,0 +1,15 @@
+<?php
+$tc = fsockopen("www.google.com", 80, $errno, $errstr, 30);
+if (!$tc) {
+    echo "$errstr ($errno)<br />\n";
+} else {
+    $out = "GET / HTTP/1.1\r\n";
+    $out .= "Host: www.google.com\r\n";
+    $out .= "Connection: Close\r\n\r\n";
+    fwrite($tc, $out);
+    while (!feof($tc)) {
+        echo fgets($tc, 128);
+    }
+    fclose($tc);
+}
+?>
