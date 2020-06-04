@@ -1,0 +1,14 @@
+#To list, all the files opened by particular PID
+lsof –p PID
+
+#List I/O statistics of all the PID
+ pidstat –d
+ 
+ # top command can show you CPU utilization, process details, a number of tasks, memory utilization, a number of zombie processes, etc.
+top
+
+#Display disk I/O statistics
+iostat -d
+
+#xecuting sar command will show you system utilization for the entire day.
+sar
