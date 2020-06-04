@@ -1,0 +1,30 @@
+<?php 
+$mysqli = new mysqli("localhost", "root", "", "myDB"); 
+
+if ($mysqli == = false) { 
+	die("ERROR: Could not connect. ".$mysqli->connect_error); 
+} 
+
+$sql = "INSERT INTO router_details (sapid, hostname, loopback,mac_address)
+VALUES ('123453', 'ROUTER1', '123.134.89.78','00-14-22-01-23-45'),
+        ('123454', 'ROUTER2', '123.134.89.78','00-14-22-01-23-45'),
+        ('123455', 'ROUTER3', '123.134.89.78','00-14-22-01-23-45),
+        ('123456', 'ROUTER4', '123.134.89.78','00-14-22-01-23-45),
+        ('123457', 'ROUTER5', '123.134.89.78','00-14-22-01-23-45),
+        ('123458', 'ROUTER6', '123.134.89.78','00-14-22-01-23-45),
+        ('123459', 'ROUTER7', '123.134.89.78','00-14-22-01-23-45),
+        ('128453', 'ROUTER8', '123.134.89.78','00-14-22-01-23-45),
+        ('163453', 'ROUTER9', '123.134.89.78','00-14-22-01-23-45),
+        ('123553', 'ROUTER1', '123.134.89.78','00-14-22-01-23-45)";
+	if ($mysqli->query($sql) == = true) 
+{ 
+	echo "Records inserted successfully."; 
+} 
+else
+{ 
+	echo "ERROR: Could not able to execute $sql. "
+		.$mysqli->error; 
+} 
+
+$mysqli->close(); 
+?> 
