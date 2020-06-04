@@ -1,0 +1,4 @@
+<?php
+// $bytes contains the number of bytes available on "/"
+$bytes = disk_free_space("/");
+?>
