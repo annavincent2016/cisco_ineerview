@@ -1,0 +1,33 @@
+1. w and uptime commands:
+
+Both these are in build linux commands which will show you the current server load as well as the uptime of the server. Usually, these commands are used for a quick check on the current server load.
+
+
+
+2. top and htop commands:
+
+This is also a widely used command to monitor the running processes dynamically. But it will consume more server resources compared to w and uptime commands. So it is good to use top command in case of detailed check about the running processes and it is not recommended to use on low configuration servers during high load times. 
+
+
+
+3. free -m command:
+
+This command is used to display the RAM usage details.
+
+
+
+4. iostat -x command:
+
+This command is used to view the I/O usage statistics. It will not work on OpenVZ based servers. 
+
+
+
+5. ps -aux command:
+
+We can get the process list by using this command. It will also show you the process ID and we can use it to kill a particular process if needed.
+
+
+
+6. sar -q command:
+
+This will show you the load consumption details for every five minutes on the server since the beginning of the day. This is usually used to determine when the load issues are started. 
