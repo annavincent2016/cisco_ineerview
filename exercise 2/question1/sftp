@@ -1,0 +1,17 @@
+<?php
+$localFile='/files/myfile.zip';
+$remoteFile='/filesDir/myfile.zip';
+$host = "myserver.com";
+$port = 22;
+$user = "sftp-user";
+$pass = "abc123456789";
+ 
+$connection = ssh2_connect($host, $port);
+ssh2_auth_password($connection, $user, $pass);
+$sftp = ssh2_sftp($connection);
+ 
+$stream = fopen("ssh2.sftp://$sftp$remoteFile", 'w');
+$file = file_get_contents($localFile);
+fwrite($stream, $file);
+fclose($stream);
+?>
