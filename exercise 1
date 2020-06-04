@@ -1,0 +1,24 @@
+<?php
+$url='127.0.0.1:3306';
+$username='root';
+$password='';
+$conn=mysqli_connect($url,$username,$password,"myDB");
+if(!$conn){
+ die('Could not Connect My Sql:' .mysql_error());
+}
+// sql to create table
+$sql = "CREATE TABLE router_details (
+sapid INT(18) UNIQUE PRIMARY KEY,
+Hostname VARCHAR(14) NOT NULL,
+loopback VARCHAR(30) NOT NULL,
+mac_address VARCHAR(17) NOT NULL
+)";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Table router created successfully";
+} else {
+  echo "Error creating table: " . $conn->error;
+}
+
+$conn->close();
+?>
