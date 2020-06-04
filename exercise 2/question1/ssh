@@ -1,0 +1,9 @@
+<?php
+$connection = ssh2_connect('www.google.com', 22);
+
+if (ssh2_auth_password($connection, 'username', 'secret')) {
+  echo "Authentication Successful!\n";
+} else {
+  die('Authentication Failed...');
+}
+?>
